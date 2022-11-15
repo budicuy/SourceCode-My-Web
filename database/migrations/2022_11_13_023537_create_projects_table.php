@@ -15,8 +15,11 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
+            $table->foreignId('user_id');
             $table->string('slug')->unique();
             $table->string('tittle');
+            $table->string('excerpt');
             $table->string('description');
             $table->string('image');
             $table->timestamps();

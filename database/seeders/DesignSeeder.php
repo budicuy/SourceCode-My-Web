@@ -21,6 +21,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 2,
                 'user_id' => 1,
                 'slug' => 'dino-gallery-apps',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_1.jpg'
             ],
@@ -29,6 +30,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 1,
                 'user_id' => 2,
                 'slug' => 'mobile-sallery-dasboard',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_2.jpg'
             ],
@@ -37,6 +39,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 3,
                 'user_id' => 3,
                 'slug' => 'plant-shop-apps',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_3.jpg'
             ],
@@ -45,6 +48,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 4,
                 'user_id' => 4,
                 'slug' => 'food-ninja',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_4.jpg'
             ],
@@ -53,6 +57,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 5,
                 'user_id' => 5,
                 'slug' => 'dasboard-ui',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_5.jpg'
             ],
@@ -61,6 +66,7 @@ class DesignSeeder extends Seeder
                 'category_id' => 2,
                 'user_id' => 5,
                 'slug' => 'weather-apps',
+                'excerpt' => 'Comming soon....',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
                 'image' => 'img/design/design_6.jpg'
             ],

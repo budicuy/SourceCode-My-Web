@@ -48,9 +48,8 @@
             <div data-aos="zoom-in" class="block p-4 bg-white shadow rounded-xl ">
                 <div class="relative w-full overflow-hidden rounded-lg">
                     <img loading="lazy" src="{{ $design->image }}" alt="{{ $design->tittle }}">
-                    <p class="absolute bottom-0 right-0 px-5 py-2 text-sm text-white rounded-tl bg-glass">{{
-                        $design->user->name
-                        }}
+                    <p class="absolute bottom-0 right-0 px-5 py-2 text-sm text-white rounded-tl bg-glass">
+                        {{ $design->user->name }}
                     </p>
                 </div>
                 <span class="flex gap-5 mt-3 font-semibold">
@@ -60,7 +59,7 @@
                     {{ $design->tittle }}
                 </h3>
                 <p class="mb-3 text-sm lg:text-base text-black/50">
-                    {{ $design->description }}
+                    {{ $design->excerpt }}
                 </p>
                 <a href="">
                     <button class="flex gap-3 text-sm font-semibold lg:text-lg text-black/70 hover:text-purple-600">

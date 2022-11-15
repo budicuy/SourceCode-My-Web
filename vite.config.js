@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/contact.css',
                 'resources/css/about.css',
                 'resources/css/design.css',
+                'resources/css/project.css',
                 'resources/js/app.js',
                 'resources/js/main.js'],
             refresh: true,
