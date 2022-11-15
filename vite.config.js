@@ -10,8 +10,11 @@ export default defineConfig({
                 'resources/css/about.css',
                 'resources/css/design.css',
                 'resources/css/project.css',
+                'resources/css/dasboard.css',
                 'resources/js/app.js',
-                'resources/js/main.js'],
+                'resources/js/main.js',
+                'resources/js/dasboard.js'
+            ],
             refresh: true,
         }),
     ],

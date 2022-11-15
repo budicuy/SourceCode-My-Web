@@ -67,6 +67,8 @@
   {{-- @include('components.loader') --}}
  </main>
  @include('components.footer')
+ @yield('script')
+ {{-- SwiperJS --}}
  @vite('resources/js/app.js')
  {{-- Aos Animation --}}
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

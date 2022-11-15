@@ -19,6 +19,11 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/design', [DesignController::class, 'index']);
 Route::get('/project', [ProjectController::class, 'index']);
 
+Route::get('/dasboard', function () {
+    return view('dasboard', [
+        'tittle' => 'Dasboard',
+    ]);
+});
 
 Route::get('/about', function () {
     return view('about', [

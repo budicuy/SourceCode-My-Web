@@ -1,4 +1,4 @@
-<nav id="header" class="bg-white shadow navbar">
+<nav id="header" class="bg-white shadow navbar" {{ $tittle==='Dasboard' ? 'hidden' : '' }}>
   <div class="container flex flex-wrap items-center justify-between w-full px-2 mx-auto md:px-0">
     <a href="/" class="flex items-center self-center gap-1 text-xl font-bold md:text-2xl">
       <span class="whitespace-nowrap">Flix</span>
@@ -22,7 +22,7 @@
         <li class="nav-link">
           <a href="/" class="{{ $tittle === 'Home' ? 'active' : '' }}">Home</a>
         </li>
-        
+
         <li>
           <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" {{-- Jika tittle sama dengan Project
             atau Design atau Service tambahkan class active Jika Tidak maka Kosong --}}

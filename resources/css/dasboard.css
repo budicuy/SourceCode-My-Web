@@ -1,0 +1,7 @@
+.halaman {
+    @apply hidden;
+}
+
+.halaman.active {
+    @apply block;
+}
