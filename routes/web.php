@@ -22,8 +22,13 @@ Route::get('/project', [ProjectController::class, 'index']);
 Route::get('/dasboard', function () {
     return view('dasboard', [
         'tittle' => 'Dasboard',
+        'designs' => \App\Models\Design::all(),
+        'projects' => \App\Models\Project::all(),
+        'categories' => \App\Models\Category::all(),
+        'users' => \App\Models\User::all(),
     ]);
 });
+
 
 Route::get('/about', function () {
     return view('about', [

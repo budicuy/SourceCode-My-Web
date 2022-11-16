@@ -5,3 +5,39 @@
 .halaman.active {
     @apply block;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 5px #9333ea;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9333ea;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+.mySwiper:before {
+    background: linear-gradient(
+        90deg,
+        rgba(243, 244, 246, 1) 70%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    content: "";
+    height: 120%;
+    position: absolute;
+    width: 15%;
+    z-index: 5;
+}
+
+.mySwiper:before {
+    @apply top-0 right-0 rotate-180 translate-x-20;
+}
