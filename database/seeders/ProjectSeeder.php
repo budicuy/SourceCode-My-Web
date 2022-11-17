@@ -22,7 +22,7 @@ class ProjectSeeder extends Seeder
                 'category_id' => 5,
                 'user_id' => 1,
                 'excerpt' => 'Comming soon....',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+                'description' => fake()->text(500),
                 'image' => 'img/project/project_1.jpg'
             ],
             [
@@ -31,7 +31,7 @@ class ProjectSeeder extends Seeder
                 'category_id' => 4,
                 'user_id' => 2,
                 'excerpt' => 'Comming soon....',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+                'description' => fake()->text(500),
                 'image' => 'img/project/project_2.jpg'
             ],
             [
@@ -40,7 +40,7 @@ class ProjectSeeder extends Seeder
                 'category_id' => 3,
                 'user_id' => 3,
                 'excerpt' => 'Comming soon....',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+                'description' => fake()->text(500),
                 'image' => 'img/project/project_3.jpg'
             ],
         ])->each(function ($project) {

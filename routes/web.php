@@ -1,9 +1,13 @@
 <?php
 
+use App\Models\User;
+use App\Models\Design;
+use App\Models\Project;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DesignController;
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +24,22 @@ Route::get('/design', [DesignController::class, 'index']);
 Route::get('/project', [ProjectController::class, 'index']);
 
 Route::get('/dasboard', function () {
-    return view('dasboard', [
+    return view('dasboard.index', [
         'tittle' => 'Dasboard',
-        'designs' => \App\Models\Design::all(),
-        'projects' => \App\Models\Project::all(),
-        'categories' => \App\Models\Category::all(),
-        'users' => \App\Models\User::all(),
+        'designs' => Design::all(),
+        'projects' => Project::all(),
+        'categories' => Category::all(),
+        'users' => User::all(),
+    ]);
+});
+
+Route::get('dasboard-project', function () {
+    return view('dasboard.project', [
+        'tittle' => 'Dasboard Project',
+        'projects' => Project::all(),
+        'projects_2' => Project::take(10)->get(),
+        'categories' => Category::all(),
+        'users' => User::all(),
     ]);
 });
 

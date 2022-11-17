@@ -57,7 +57,6 @@
   {{-- Main CSS --}}
   @vite('resources/css/app.css')
   @yield('css')
-
 </head>
 
 <body class="bg-gray-100 ">
@@ -80,7 +79,7 @@
           {{-- Menu button --}}
           <button
             @click="(isSidebarOpen && currentSidebarTab == 'linksTab') ? isSidebarOpen = false : isSidebarOpen = true; currentSidebarTab = 'linksTab'"
-            class="p-2 transition-colors rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
+            class="p-2 rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
             :class="(isSidebarOpen && currentSidebarTab == 'linksTab') ? 'text-white bg-purple-600' : 'text-gray-500 bg-white'">
             <span class="sr-only">Toggle sidebar</span>
             <svg aria-hidden="true" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -124,7 +123,7 @@
             {{-- Menu button --}}
             <button
               @click="(isSidebarOpen && currentSidebarTab == 'linksTab') ? isSidebarOpen = false : isSidebarOpen = true; currentSidebarTab = 'linksTab'"
-              class="p-2 transition-colors rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
+              class="p-2 rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
               :class="(isSidebarOpen && currentSidebarTab == 'linksTab') ? 'text-white bg-purple-600' : 'text-gray-500 bg-white'">
               <span class="sr-only">Toggle sidebar</span>
               <svg aria-hidden="true" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -135,7 +134,7 @@
             {{-- Messages button --}}
             <button
               @click="(isSidebarOpen && currentSidebarTab == 'messagesTab') ? isSidebarOpen = false : isSidebarOpen = true; currentSidebarTab = 'messagesTab'"
-              class="p-2 transition-colors rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
+              class="p-2 rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
               :class="(isSidebarOpen && currentSidebarTab == 'messagesTab') ? 'text-white bg-purple-600' : 'text-gray-500 bg-white'">
               <span class="sr-only">Toggle message panel</span>
               <svg aria-hidden="true" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -147,7 +146,7 @@
             {{-- Notifications button --}}
             <button
               @click="(isSidebarOpen && currentSidebarTab == 'notificationsTab') ? isSidebarOpen = false : isSidebarOpen = true; currentSidebarTab = 'notificationsTab'"
-              class="p-2 transition-colors rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
+              class="p-2 rounded-lg shadow-md hover:bg-purple-800 hover:text-white focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset-white focus:ring-offset-2"
               :class="(isSidebarOpen && currentSidebarTab == 'notificationsTab') ? 'text-white bg-purple-600' : 'text-gray-500 bg-white'">
               <span class="sr-only">Toggle notifications panel</span>
               <svg aria-hidden="true" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -189,22 +188,32 @@
                 <img class="rounded-full" src="img/me.jpg" width="96" alt="me">
               </a>
             </div>
-            <!-- Links -->
+            {{-- Links --}}
             <div class="flex-1 px-4 space-y-2 overflow-hidden hover:overflow-auto">
-              <a href="#" class="flex items-center w-full space-x-2 text-white bg-purple-600 rounded-lg">
-                <span aria-hidden="true" class="p-2 bg-purple-700 rounded-lg">
-                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              <a href="/dasboard"
+                class="flex items-center w-full space-x-2  {{ $tittle === 'Dasboard' ? 'text-white bg-purple-600' : 'hover:bg-purple-600 hover:text-white text-purple-600' }} rounded-lg">
+                <span aria-hidden="true" class="p-2 rounded-lg group-hover:bg-purple-700 group-hover:text-white">
+                  <svg class="w-6 h-6 fill-current" x="0px" y="0px" viewBox="0 0 176.532 176.532">
+                    <path
+                      d="M152.928,85.912l-59.89-49.406c-2.771-2.287-6.773-2.287-9.545,0l-59.89,49.406
+                		c-1.728,1.425-2.728,3.546-2.728,5.785v74.544c0,4.143,3.357,7.5,7.5,7.5h119.779c4.143,0,7.5-3.357,7.5-7.5V91.697
+                		C155.656,89.458,154.656,87.337,152.928,85.912z M96.196,158.741H80.336v-41.524h15.859V158.741z M140.656,158.741h-29.46v-49.024
+                		c0-4.143-3.357-7.5-7.5-7.5H72.836c-4.143,0-7.5,3.357-7.5,7.5v49.024h-29.46V95.233l52.39-43.219l52.39,43.219V158.741z" />
+                    <path d=" M173.72,70.866c-16.706-13.382-32.458-26.178-49.561-40.261
+                      c-5.109-4.591-10.479-8.938-15.675-13.144c-5.087-4.118-10.348-8.377-15.201-12.745c-2.854-2.568-7.182-2.568-10.035,0
+                      c-4.854,4.368-10.114,8.627-15.201,12.745c-5.195,4.205-10.565,8.553-15.675,13.144C35.27,44.689,19.518,57.484,2.812,70.866
+                      c-3.233,2.589-3.755,7.31-1.165,10.542c2.589,3.232,7.311,3.755,10.542,1.165C28.991,69.116,44.829,56.249,62.034,42.08
+                      c0.085-0.069,0.168-0.141,0.25-0.215c4.854-4.368,10.114-8.627,15.201-12.745c3.559-2.88,7.199-5.827,10.781-8.873
+                      c3.582,3.046,7.223,5.993,10.781,8.873c5.087,4.118,10.348,8.377,15.201,12.745c0.082,0.074,0.165,0.146,0.25,0.215
+                      c17.204,14.169,33.043,27.036,49.845,40.493c1.384,1.108,3.039,1.646,4.684,1.646c2.198,0,4.377-0.962,5.858-2.812
+                      C177.475,78.176,176.953,73.455,173.72,70.866z" />
                   </svg>
                 </span>
                 <span>Dasboard</span>
               </a>
-              <a href="#"
-                class="flex items-center space-x-2 text-purple-600 transition-colors rounded-lg group hover:bg-purple-600 hover:text-white">
-                <span aria-hidden="true"
-                  class="p-2 transition-colors rounded-lg group-hover:bg-purple-700 group-hover:text-white">
+              <a href="/dasboard-project"
+                class="flex items-center w-full space-x-2  {{ $tittle === 'Dasboard Project' ? 'text-white bg-purple-600' : 'hover:bg-purple-600 hover:text-white  text-purple-600' }} rounded-lg">
+                <span aria-hidden="true" class="p-2 rounded-lg group-hover:bg-purple-700 group-hover:text-white">
                   <svg class="w-6 h-6 fill-current" viewBox="0 0 231.087 231.087"
                     xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 231.087 231.087">
                     <path
@@ -225,10 +234,9 @@
                 </span>
                 <span>Project</span>
               </a>
-              <a href="#"
-                class="flex items-center space-x-2 text-purple-600 transition-colors rounded-lg group hover:bg-purple-600 hover:text-white">
-                <span aria-hidden="true"
-                  class="p-2 transition-colors rounded-lg group-hover:bg-purple-700 group-hover:text-white">
+              <a href="/dasboard-design"
+                class="flex items-center w-full space-x-2  {{ $tittle === 'Apaan Tuh??' ? 'text-white bg-purple-600' : 'hover:bg-purple-600 hover:text-white  text-purple-600' }} rounded-lg">
+                <span aria-hidden="true" class="p-2 rounded-lg group-hover:bg-purple-700 group-hover:text-white">
                   <svg class="w-6 h-6 fill-current" version="1.1" id="Uploaded to svgrepo.com"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -243,9 +251,8 @@
                 <span>Design</span>
               </a>
               <a href="#"
-                class="flex items-center space-x-2 text-purple-600 transition-colors rounded-lg group hover:bg-purple-600 hover:text-white">
-                <span aria-hidden="true"
-                  class="p-2 transition-colors rounded-lg group-hover:bg-purple-700 group-hover:text-white">
+                class="flex items-center w-full space-x-2  {{ $tittle === 'Apaan Tuh??' ? 'text-white bg-purple-600' : 'hover:bg-purple-600 hover:text-white  text-purple-600' }} rounded-lg">
+                <span aria-hidden="true" class="p-2 rounded-lg group-hover:bg-purple-700 group-hover:text-white">
                   <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                     <path
                       d="M2 6.47762C2 5.1008 2 4.4124 2.22168 3.86821C2.52645 3.12007 3.12007 2.52645 3.86821 2.22168C4.4124 2 5.1008 2 6.47762 2V2C7.85443 2 8.54284 2 9.08702 2.22168C9.83517 2.52645 10.4288 3.12007 10.7336 3.86821C10.9552 4.4124 10.9552 5.1008 10.9552 6.47762V6.47762C10.9552 7.85443 10.9552 8.54284 10.7336 9.08702C10.4288 9.83517 9.83517 10.4288 9.08702 10.7336C8.54284 10.9552 7.85443 10.9552 6.47762 10.9552V10.9552C5.1008 10.9552 4.4124 10.9552 3.86821 10.7336C3.12007 10.4288 2.52645 9.83517 2.22168 9.08702C2 8.54284 2 7.85443 2 6.47762V6.47762Z"
@@ -264,9 +271,8 @@
                 <span>Categories</span>
               </a>
               <a href="#"
-                class="flex items-center space-x-2 text-purple-600 transition-colors rounded-lg group hover:bg-purple-600 hover:text-white">
-                <span aria-hidden="true"
-                  class="p-2 transition-colors rounded-lg group-hover:bg-purple-700 group-hover:text-white">
+                class="flex items-center w-full space-x-2  {{ $tittle === 'Apaan Tuh??' ? 'text-white bg-purple-600' : 'hover:bg-purple-600 hover:text-white  text-purple-600' }} rounded-lg">
+                <span aria-hidden="true" class="p-2 rounded-lg group-hover:bg-purple-700 group-hover:text-white">
                   <svg class="w-6 h-6 fill-current" x="0px" y="0px" viewBox="0 0 489 489">
                     <path d="M417.4,71.6C371.2,25.4,309.8,0,244.5,0S117.8,25.4,71.6,71.6S0,179.2,0,244.5s25.4,126.7,71.6,172.9S179.2,489,244.5,489
                 			s126.7-25.4,172.9-71.6S489,309.8,489,244.5S463.6,117.8,417.4,71.6z M244.5,462C124.6,462,27,364.4,27,244.5S124.6,27,244.5,27
@@ -299,9 +305,9 @@
         <header class="relative flex items-center justify-between flex-shrink-0 p-4 bg-white">
           <form action="#" class="flex-1">
             <!-- Search input -->
-            <div class="flex items-center  w-full max-w-xl mr-6 focus-within:text-purple-500">
+            <div class="flex items-center w-full max-w-xl mr-6 focus-within:text-purple-500">
               <label for="searching-nav">
-                <div class=" rounded-l-md  bg-purple-600 p-3">
+                <div class="p-3 bg-purple-600 rounded-l-md">
                   <svg width="15" height="15" class=" fill-white" x="0px" y="0px" viewBox="0 0 487.95 487.95">
                     <path
                       d="M481.8,453l-140-140.1c27.6-33.1,44.2-75.4,44.2-121.6C386,85.9,299.5,0.2,193.1,0.2S0,86,0,191.4s86.5,191.1,192.9,191.1
