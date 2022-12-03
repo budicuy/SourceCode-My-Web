@@ -1,11 +1,11 @@
 @extends('layout.main')
 
 @section('meta')
-<link rel="preload" as="image" href="img/logo-4.png">
-<link rel="preload" as="image" href="img/logo-1.png">
-<link rel="preload" as="image" href="img/logo-2.png">
-<link rel="preload" as="image" href="img/logo-3.png">
-<link rel="preload" as="image" href="img/userbg.png">
+<link rel="preload" as="image" href="{{ asset('img/logo-4.png') }}">
+<link rel="preload" as="image" href="{{ asset('img/logo-1.png') }}">
+<link rel="preload" as="image" href="{{ asset('img/logo-2.png') }}">
+<link rel="preload" as="image" href="{{ asset('img/logo-4.png') }}">
+<link rel="preload" as="image" href="{{ asset('img/userbg.png') }}">
 @endsection
 @section('content')
 {{-- Hero --}}
@@ -27,7 +27,6 @@
                     take freelance project at WhatsApps, and make <u>Digital Web
                         products</u>. Happy to collaborate with you
                 </p>
-
                 <div class="flex items-center gap-2 mt-3 md:gap-3 ">
                     <a href="#serve">
                         <button
@@ -73,11 +72,11 @@
         </div>
         <div class="relative mt-10 heroImage md:mt-0">
             <div class=" lg:mt-10">
-                <img class="relative " src="img/userbg.png" alt="">
-                <img class="absolute img-animated " src="img/logo-1.png" alt="">
-                <img class="absolute img-animated " src="img/logo-2.png" alt="">
-                <img class="absolute img-animated " src="img/logo-3.png" alt="">
-                <img class="absolute img-animated " src="img/logo-4.png" alt="">
+                <img class="relative" src="{{ asset('img/userbg.png') }}" alt="">
+                <img class="absolute img-animated" src="{{ asset('img/logo-1.png') }}" alt="">
+                <img class="absolute img-animated" src="{{ asset('img/logo-2.png') }}" alt="">
+                <img class="absolute img-animated" src="{{ asset('img/logo-3.png') }}" alt="">
+                <img class="absolute img-animated" src="{{ asset('img/logo-4.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -98,12 +97,12 @@
             @foreach ($service as $serve)
             <div data-aos="fade-up" data-aos-delay="100" class="px-10">
                 <img loading="lazy" class="block mx-auto drop-shadow-lg w-[50%]"
-                    src="img/services/{{ $serve['image'] }}" alt="{{ $serve['tittle'] }}">
-                <h4 class="mb-1 text-2xl font-bold text-center lg:text-3xl text-black/90">{{ $serve['tittle'] }}</h4>
-                <p class="font-normal leading-7 text-center text-slate-600">Create eye-catching and powerful mobile apps
-                    with
-                    a
-                    focus on User
+                    src="{{ asset('img/services/' . $serve['image']) }}" alt="{{ $serve['tittle'] }}">
+                <h4 class="mb-1 text-2xl font-bold text-center lg:text-3xl text-black/90">{{ $serve['tittle'] }}
+                </h4>
+                <p class="font-normal leading-7 text-center text-slate-600">
+                    Create eye-catching and powerful mobile apps
+                    with a focus on User
                 </p>
                 <a href="{{ $serve['link'] }}">
                     <button
@@ -128,7 +127,7 @@
                 <div data-aos="fade-up" data-aos-delay="{{ $i }}"
                     class="flex flex-col flex-wrap justify-between p-4 bg-white rounded-xl ">
                     <div>
-                        <img loading="lazy" class="w-full rounded-lg" src="{{ $project->image }}"
+                        <img loading="lazy" class="w-full rounded-lg" src="{{ asset('img/project/'. $project->image) }}"
                             alt="{{ $project->tittle }}">
                         <span class="flex gap-5 mt-3 font-semibold ">
                             <u class="text-purple-500">#{{ $project->category->category_name }}</u>
@@ -139,9 +138,7 @@
                         </h5>
                         <p class="mb-3 text-sm lg:text-base text-black/50">
                             {!! Str::limit($project->description, 100, '<span
-                                class="font-normal text text-slate-400">...</span>'
-                            )
-                            !!}
+                                class="font-normal text text-slate-400">...</span>') !!}
                         </p>
                     </div>
                     <a href="/">
@@ -172,12 +169,12 @@
     <div class="py-20 bg-3">
         <div class="container">
             <div class="px-5 md:px-10 lg:px-20">
-                <div class="flex justify-between pr-5 item-center">
+                <div class="flex items-center justify-between ">
                     <div>
-                        <h1 class="block text-5xl font-bold text-purple-600 ">
+                        <h1 class="block text-3xl font-bold text-purple-600 md:text-5xl ">
                             My Design
                         </h1>
-                        <p class="mb-3 text-3xl font-semibold text-black">The Latest my our deigns</p>
+                        <p class="mb-3 text-lg font-semibold md:text-3xl text-black/80">The Latest my our deigns</p>
                     </div>
                     <a href="/design">
                         <div class="flex items-center gap-3 text-2xl underline md:hidden text-slate-500">
@@ -186,7 +183,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid gap-5 mb-10 md:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-2 gap-5 mb-10 lg:grid-cols-3">
                     <?php $i = 100; ?>
                     @foreach ($designs_home as $design)
                     <div data-aos="fade-up" data-aos-delay="{{ $i }}"

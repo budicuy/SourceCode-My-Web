@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\project;
+use App\Models\Project;
 
 class ProjectSeeder extends Seeder
 {
@@ -23,25 +23,25 @@ class ProjectSeeder extends Seeder
                 'user_id' => 1,
                 'excerpt' => 'Comming soon....',
                 'description' => fake()->text(500),
-                'image' => 'img/project/project_1.jpg'
+                'image' => 'project_1.jpg'
             ],
             [
                 'tittle' => 'Art Gallery Background',
                 'slug' => 'art-gallery-background',
                 'category_id' => 4,
-                'user_id' => 2,
+                'user_id' => 1,
                 'excerpt' => 'Comming soon....',
                 'description' => fake()->text(500),
-                'image' => 'img/project/project_2.jpg'
+                'image' => 'project_2.jpg'
             ],
             [
                 'tittle' => 'Crypto Transanction',
                 'slug' => 'crypto-transanction',
                 'category_id' => 3,
-                'user_id' => 3,
+                'user_id' => 1,
                 'excerpt' => 'Comming soon....',
                 'description' => fake()->text(500),
-                'image' => 'img/project/project_3.jpg'
+                'image' => 'project_3.jpg'
             ],
         ])->each(function ($project) {
             project::create($project);

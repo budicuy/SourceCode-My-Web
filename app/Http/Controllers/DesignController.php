@@ -17,7 +17,6 @@ class DesignController extends Controller
     {
         return view('design', [
             'tittle' => 'Design',
-            // get design with category and user
             'designs' => Design::with('category', 'user')->get(),
         ]);
     }

@@ -476,6 +476,7 @@
   @yield('script')
   {{-- SwiperJS --}}
   @vite('resources/js/app.js')
+  @vite('resources/js/main.js')
   {{-- Aos Animation --}}
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

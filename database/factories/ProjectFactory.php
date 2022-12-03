@@ -20,7 +20,7 @@ class ProjectFactory extends Factory
             'tittle' => fake()->sentence(mt_rand(2, 8)),
             'slug' =>  fake()->slug(),
             'category_id' => fake()->numberBetween(1, 5),
-            'user_id' => fake()->numberBetween(1, 23),
+            'user_id' => 1,
             'excerpt' => fake()->text(100),
             'description' => fake()->text(500),
             'image' => fake()->imageUrl(640, 480, 'technics', true),

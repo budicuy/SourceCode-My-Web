@@ -23,38 +23,31 @@ use App\Http\Controllers\ProjectController;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/design', [DesignController::class, 'index']);
 Route::get('/project', [ProjectController::class, 'index']);
-
-Route::get('/dasboard', function () {
-    return view('dasboard.index', [
-        'tittle' => 'Dasboard',
-        'designs' => Design::all(),
-        'projects' => Project::all(),
-        'categories' => Category::all(),
-        'users' => User::all(),
-    ]);
-});
-
-Route::get('dasboard-project', function () {
-    return view('dasboard.project', [
-        'tittle' => 'Dasboard Project',
-        'projects' => Project::all(),
-        'projects_2' => Project::take(10)->get(),
-        'categories' => Category::all(),
-        'users' => User::all(),
-    ]);
-});
-
-
 Route::get('/about', function () {
     return view('about', [
         'tittle' => 'About'
     ]);
 });
-
-
-
 Route::get('/contact', function () {
     return view('contact', [
         'tittle' => 'Contact'
     ]);
 });
+// Route::get('/dasboard', function () {
+//     return view('dasboard.indexAdmin', [
+//         'tittle' => 'Dasboard',
+//         'designs' => Design::all(),
+//         'projects' => Project::all(),
+//         'categories' => Category::all(),
+//         'users' => User::all(),
+//     ]);
+// });
+// Route::get('dasboard-project', function () {
+//     return view('dasboard.projectAdmin', [
+//         'tittle' => 'Dasboard Project',
+//         'projects' => Project::all(),
+//         'projects_2' => Project::take(10)->get(),
+//         'categories' => Category::all(),
+//         'users' => User::all(),
+//     ]);
+// });

@@ -36,7 +36,7 @@
         @foreach ($projects as $project)
         <div data-aos="fade-up" data-aos-delay="" class="block p-4 bg-white border shadow rounded-xl">
             <div class="relative w-full overflow-hidden rounded-lg">
-                <img src="{{ $project->image }}" alt="{{ $project->tittle }}">
+                <img src="{{ asset('img/project/'. $project->image) }}" alt="{{ $project->tittle }}">
                 <p class="absolute bottom-0 right-0 px-4 text-white rounded-tl bg-glass">
                     {{ $project->user->name }}
                 </p>

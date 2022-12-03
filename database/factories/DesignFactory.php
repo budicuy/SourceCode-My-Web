@@ -19,7 +19,7 @@ class DesignFactory extends Factory
         return [
             'tittle' => fake()->sentence(mt_rand(2, 8)),
             'slug' =>  fake()->slug(),
-            'user_id' => fake()->numberBetween(1, 23),
+            'user_id' => 1,
             'category_id' => fake()->numberBetween(1, 5),
             'excerpt' => fake()->text(100),
             'description' => fake()->text(500),
