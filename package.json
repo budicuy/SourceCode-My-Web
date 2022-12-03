@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "migrate": "php artisan migrate:fresh --seed"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.12",

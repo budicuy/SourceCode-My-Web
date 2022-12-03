@@ -30,6 +30,7 @@ var swiper = new Swiper(".mySwiper", {
  slidesPerView: 1,
  spaceBetween: 10,
  freeMode: true,
+ autoHeight: true,
  scrollbar: {
   el: ".swiper-scrollbar",
   hide: true,

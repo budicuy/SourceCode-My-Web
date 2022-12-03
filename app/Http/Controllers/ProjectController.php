@@ -17,7 +17,8 @@ class ProjectController extends Controller
     {
         return view('project', [
             'tittle' => 'Project',
-            'projects' => project::all(),
+            // get with category and user
+            'projects' => Project::with('category', 'user')->get(),
         ]);
     }
 

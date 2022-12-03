@@ -17,8 +17,8 @@ class IndexController extends Controller
     {
         return view('index', [
             'tittle' => 'Home',
-            'designs' => Design::all(),
-            'projects' => Project::all(),
+            'designs_home' => Design::with('category')->take(6)->get(),
+            'projects_home' => Project::with('category')->take(3)->get(),
             'service' => collect([
                 [
                     'tittle' => 'Web Design',
