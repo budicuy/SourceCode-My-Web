@@ -20,7 +20,7 @@
       <p class="text-xl text-center md:text-3xl text-slate-600">
         I'm <b class="text-slate-800">UI/UX designer</b> from Indonesia. I usually create content and project on
         <u>Github</u> at the
-        <u>Flix Developer</u> team, make products and do freelance projects. Happy to collaborate with you
+        <u>Web Developer</u> team, make products and do freelance projects. Happy to collaborate with you
       </p>
     </div>
   </div>

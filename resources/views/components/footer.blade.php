@@ -93,7 +93,7 @@
  <div class="container mx-auto md:px-6 sm:flex sm:items-center sm:justify-between">
   <a href="/" class="flex items-center self-center gap-1 text-xl font-bold md:text-2xl">
    <span class="text-white whitespace-nowrap">
-    Flix
+    Web
    </span>
    <span class="text-purple-500 whitespace-nowrap">
     Developer
@@ -131,7 +131,7 @@
  <span class="block text-sm text-gray-100 sm:text-center">
   <span>© 2022</span>
   <a href="/" class="hover:underline">
-   Flix Developer
+   Web Developer
   </a>
   <span>. All Rights Reserved.</span>
  </span>
